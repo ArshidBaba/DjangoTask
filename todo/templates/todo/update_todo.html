@@ -1,0 +1,54 @@
+<!-- <form method="POST" action="{% url 'update_todo' todo.id %}">
+    {% csrf_token %}
+    <label for="title">Title Name:</label>
+    <input type="text" id="title" name="title" value="{{ todo.title }}" required>
+    <br>
+    <label for="category">Category:</label>
+    <input type="text" id="category" name="category" value="{{ todo.category }}" required>
+    <br>
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" required>{{ todo.description }}</textarea>
+    <br>
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" value="{{ todo.date }}" required>
+    <br>
+    <input type="submit" value="Update">
+</form> -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Update Todo</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Update Todo</h1>
+        <form method="POST" action="{% url 'update_todo' todo.id %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="title">Title Name:</label>
+                <input type="text" id="title" name="title" class="form-control" value="{{ todo.title }}" required>
+            </div>
+            <div class="form-group">
+                <label for="category">Category:</label>
+                <input type="text" id="category" name="category" class="form-control" value="{{ todo.category }}"
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" class="form-control"
+                    required>{{ todo.description }}</textarea>
+            </div>
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" class="form-control" value="{{ todo.date }}" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+    </div>
+</body>
+
+</html>

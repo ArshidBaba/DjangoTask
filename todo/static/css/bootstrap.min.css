@@ -1,0 +1,79 @@
+/* Add custom styles for your todo app */
+
+/* Adjust font and background colors */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Style the table */
+.table {
+    margin-bottom: 20px;
+}
+
+.table th {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.table td {
+    background-color: #f8f9fa;
+}
+
+/* Style the form */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="date"] {
+    padding: 6px;
+}
+
+button[type="submit"] {
+    padding: 8px 20px;
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+}
+
+button[type="submit"]:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
