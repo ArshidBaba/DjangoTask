@@ -1,9 +1,7 @@
-/* Add custom styles for your todo app */
-
-/* Adjust font and background colors */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
+    color: #333;
 }
 
 .container {
@@ -17,24 +15,31 @@ body {
 h1 {
     margin-bottom: 20px;
     color: #333;
+    text-align: center;
 }
 
-/* Style the table */
 .table {
     margin-bottom: 20px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table th,
+.table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
 }
 
 .table th {
     background-color: #007bff;
     color: #fff;
-    border-color: #007bff;
+    text-align: left;
 }
 
-.table td {
+.table tbody tr:nth-child(even) {
     background-color: #f8f9fa;
 }
 
-/* Style the form */
 .form-group {
     margin-bottom: 15px;
 }
@@ -46,20 +51,21 @@ label {
 input[type="text"],
 textarea {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
+    padding: 10px;
+    border: 1px solid #ddd;
     border-radius: 4px;
 }
 
 input[type="date"] {
-    padding: 6px;
+    padding: 8px;
 }
 
 button[type="submit"] {
-    padding: 8px 20px;
+    padding: 10px 20px;
     background-color: #007bff;
     border-color: #007bff;
     color: #fff;
+    cursor: pointer;
 }
 
 button[type="submit"]:hover {
@@ -76,4 +82,29 @@ button[type="submit"]:hover {
 .btn-danger:hover {
     background-color: #c82333;
     border-color: #bd2130;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .table th,
+    .table td {
+        padding: 8px 10px;
+    }
+
+    input[type="text"],
+    textarea {
+        padding: 8px;
+    }
+
+    button[type="submit"] {
+        padding: 8px 16px;
+    }
 }
